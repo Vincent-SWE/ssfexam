@@ -23,6 +23,11 @@ public class ItemRepos {
             theItem.setQuantity(5);
             itemList.add(theItem);
 
+            theItem = new Item();
+            theItem.setItemName("Bread");
+            theItem.setQuantity(10);
+            itemList.add(theItem);
+
             return itemList;
 
         }
