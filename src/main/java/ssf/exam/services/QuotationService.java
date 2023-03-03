@@ -16,7 +16,17 @@ public class QuotationService {
 
     public Quotation getQuotations(List<String> itemList) throws Exception {
 
-        
+        float total = 0f;
+        // switch case to calculate the cost here
+        switch (item.getQuotation()) {
+            case "apple":
+            total += 0.3;
+            break; 
+            case "bread":
+            total += 2.5;
+            break; 
+        }
+
 
 
 
