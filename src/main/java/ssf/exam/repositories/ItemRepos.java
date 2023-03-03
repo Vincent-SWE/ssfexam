@@ -19,12 +19,12 @@ public class ItemRepos {
             itemList = new ArrayList<Item>();
 
             Item theItem = new Item();
-            theItem.setItemName("Orange");
+            theItem.setItem("Orange");
             theItem.setQuantity(5);
             itemList.add(theItem);
 
             theItem = new Item();
-            theItem.setItemName("Bread");
+            theItem.setItem("Bread");
             theItem.setQuantity(10);
             itemList.add(theItem);
 

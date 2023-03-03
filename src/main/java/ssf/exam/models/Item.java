@@ -7,7 +7,7 @@ import jakarta.validation.constraints.Pattern;
 public class Item {
 
     @Pattern(regexp = "^(apple|orange|bread|cheese|chicken|mineral_water|instant_noodles)$", message = "We do not stock your requested item")
-    private String itemName;
+    private String item;
 
     @NotNull(message = "You must add at least 1 item")
     @Min(value = 1, message = "You must add at least 1 item")
@@ -15,8 +15,8 @@ public class Item {
 
 
     // Setters and Getters
-    public void setItemName(String itemName) {this.itemName = itemName;}
-    public String getItemName() {return itemName;}
+    public void setItem(String item) {this.item = item;}
+    public String getItem() {return item;}
     public int getQuantity() {return quantity;}
     public void setQuantity(int quantity) {this.quantity = quantity;}
 

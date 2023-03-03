@@ -27,12 +27,24 @@
 					</select>
 				</td>
 			</tr>
+			</tr>
+			<!-- <tr data-th-if="${#fields.hasErrors('item')}">
+				<td>
+					<span data-th-errors="*{item}" data-th-errorclass="error"></span>
+				</td>
+			</tr> -->
+
 			<tr>
 				<td>Quantity:</td>
 				<td>
 					<input type="number" name="quantity" size="4" placeholder="Quantity">
 				</td>
 			</tr>
+				<!-- <tr data-th-if="${#fields.hasErrors('quantity')}">
+					<td>
+						<span data-th-errors="*{quantity}" data-th-errorclass="error"></span>
+					</td>
+				</tr> -->
 		</table>
 
 		<table border="1" style="margin-top: 2vh; margin-bottom: 2vh;">
@@ -48,7 +60,7 @@
 					<td>3</td>
 				</tr>
 				<tr data-th-each="item : ${cartItems}">
-					<td data-th-text="${item.itemName}"></td>
+					<td data-th-text="${item.item}"></td>
 					<td data-th-text="${item.quantity}"></td>
 				</tr>
 					

@@ -31,16 +31,14 @@ public class PurchaseOrderController {
 
     }
 
-    @PostMapping(path="/view2")
+    @GetMapping(path="/shippingaddress")
     public String postCart(Model model, HttpSession sess, 
-    @Valid Item itemName, BindingResult bindings) {
-
+    @Valid Item item, BindingResult bindings) {
         if (bindings.hasErrors())
-            return "view2";
+            return "redirect:/";
 
-        sess.setAttribute("item", itemName);
+        sess.setAttribute("item", item);
         model.addAttribute("shippingaddress", new ShippingAddress());
-
         return "view2";
     }
 
