@@ -4,11 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Shipping Addresss</title>
 </head>
 <body>
     <h1>Shipping Address</h1>
 
-    
+    <form method="POST" data-th-action="@{/view3}" data-th-object="${view2}">
+        <table>
+            <tr>
+                <td>Name: </td>
+                <td>
+                    <input type="text" size="50" placeholder="Enter your name here" data-th-field="*{name}">
+						<div data-th-if="${#fields.hasErrors('name')}">
+							<span data-th-errors="*{name}" data-th-errorclass="error"></span>
+						</div>
+                </td>
+            </tr>
+            <tr>
+                <td>Address: </td>
+                <td>
+                    <input type="text" size="50" placeholder="Enter your address here" data-th-field="*{address}">
+						<div data-th-if="${#fields.hasErrors('address')}">
+							<span data-th-errors="*{address}" data-th-errorclass="error"></span>
+						</div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button type="submit">Back</button>
+					<button type="submit">Checkout</button>
+                </td>
+            </tr>
+
+
+        </table>
+    </form>
+
+
 </body>
 </html>

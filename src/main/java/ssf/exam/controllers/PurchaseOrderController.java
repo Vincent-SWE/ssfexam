@@ -36,7 +36,7 @@ public class PurchaseOrderController {
     @Valid Item itemName, BindingResult bindings) {
 
         if (bindings.hasErrors())
-            return "redirect:/";
+            return "view2";
 
         sess.setAttribute("item", itemName);
         model.addAttribute("shippingaddress", new ShippingAddress());
