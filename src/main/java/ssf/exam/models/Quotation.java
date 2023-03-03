@@ -6,6 +6,8 @@ package ssf.exam.models;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.google.gson.JsonObject;
+
 public class Quotation {
 
     private String quoteId;
@@ -30,4 +32,23 @@ public class Quotation {
     public Float getQuotation(String item) {
         return this.quotations.getOrDefault((Object)item, -1000000f);
     }
+
+    public static Quotation create(JsonObject json) {
+        Quotation quotation = new Quotation();
+
+        if (json.containsKey("quoteId"))
+            quotation.setQuoteId(json.getS("quoteId"));
+
+        quotation.setItem(json.getString("item"));
+        quotation.setQuantity(json.getString("quantity"));
+
+        return quotation;
+
+    }
+
+
+
+
+
+
 }
